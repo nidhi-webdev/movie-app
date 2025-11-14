@@ -1,6 +1,6 @@
 import React from 'react'
 
-const movieCard = ({ movie }) => {
+const MovieCard = ({ movie }) => {
 
     const onFavClick = () => {
         alert("clicked")
@@ -27,4 +27,4 @@ const movieCard = ({ movie }) => {
     )
 }
 
-export default movieCard
+export default MovieCard
