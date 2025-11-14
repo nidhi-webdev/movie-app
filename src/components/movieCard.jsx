@@ -1,26 +1,29 @@
 import React from 'react'
 
-const movieCard = () => {
+const movieCard = ({ movie }) => {
 
     const onFavClick = () => {
-   alert("clicked")
+        alert("clicked")
     }
 
 
-  return (
-    <div className='movie-card'>
-        <div className='movie-poster'>
-            <img src={movieCard.url}  alt = {movieCard.title} />
-            <div className='movie-overlay'> 
-                <button className='fav-btn' onClick={onFavClick}>
-                  ♥
-                </button>
+    return (
+        <div className='movie-card'>
+            <div className='movie-poster'>
+                <img src={movie.url} alt={movie.title} />
+                <div className='movie-overlay'>
+                    <button className='fav-btn' onClick={onFavClick}>
+                        ♥
+                    </button>
+                </div>
+
             </div>
-      
-    </div>
-      
-    </div>
-  )
+            <div className='movie-info'>
+                <h3> {movie.title} </h3>
+            </div>
+
+        </div>
+    )
 }
 
 export default movieCard
