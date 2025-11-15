@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className='home'>
       <div className='movie-grid'>
-       {movie.map(movie => <MovieCard movie={movie} />)}
+       {movie.map(movie => <MovieCard movie={movie} key={movie.id} />)}
       </div>
     </div>
   )
