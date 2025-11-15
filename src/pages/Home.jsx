@@ -8,12 +8,14 @@ const Home = () => {
         { id: nanoid(), title: "Terminator", release_date: 2000 },
         { id: nanoid(), title: "DDLJ", release_date: 1995 }
     ]
+const handleSubmit = () => {
 
+}
    
 
     return (
         <div className='home'>
-            <form onSubmit={} className='search-form'>
+            <form onSubmit={handleSubmit} className='search-form'>
                 <input type='text' placeholder='search For Movies...' className='search-input' />
 
             </form>
