@@ -1,5 +1,6 @@
 import './App.css'
-import MovieCard from './components/movieCard'
+// import MovieCard from './components/movieCard'
+import Home from './pages/Home'
 
 function App() {
   
@@ -7,7 +8,7 @@ function App() {
   return (
     
       <> 
-      <MovieCard movie= {{title: "Test", url: "www.hht.com", release_date: "22-01-2025"}} />
+      <Home />
       </>
         
     

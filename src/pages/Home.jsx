@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import MovieCard from '../components/movieCard';
 
 
 const Home = () => {
@@ -9,8 +10,12 @@ const Home = () => {
     ]
 
   return (
-    <div>
-      
+    <div className='home'>
+      <div className='movie-grid'>
+        {movie.map((movie) => {
+        <MovieCard movie = {movie} />
+        })}
+      </div>
     </div>
   )
 }
