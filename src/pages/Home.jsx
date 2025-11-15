@@ -14,6 +14,7 @@ const Home = () => {
         { id: nanoid(), title: "DDLJ", release_date: 1995 }
     ]
     const handleSubmit = () => {
+        alert(searchQuery)
     }
 
 
