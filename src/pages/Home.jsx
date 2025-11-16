@@ -13,8 +13,10 @@ const Home = () => {
         { id: nanoid(), title: "Terminator", release_date: 2000 },
         { id: nanoid(), title: "DDLJ", release_date: 1995 }
     ]
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault()
         alert(searchQuery)
+        setSearchQuery("Please Type again")
     }
 
 
