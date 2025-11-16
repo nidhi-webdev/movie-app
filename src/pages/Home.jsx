@@ -32,7 +32,10 @@ const Home = () => {
                 <button type='submit' className='search-button'> Search </button>
             </form>
             <div className='movie-grid'>
-                {movie.map(movie => <MovieCard movie={movie} key={movie.id} />)}
+                {movie.map((movie) => movie.title.toLowerCase().startsWith(searchQuery) && (
+                    <MovieCard movie={movie} key={movie.id} />
+                )
+                )}
             </div>
         </div>
     )
