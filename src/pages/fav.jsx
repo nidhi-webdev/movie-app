@@ -3,13 +3,7 @@ import React from 'react'
 const Fav = () => {
   return (
     <div className='fav-empty min-h-screen bg-linear-to-br from-gray-900 via-purple-900 to-indigo-900 flex items-center justify-center p-6'>
-      <div className='text-center max-w-2xl mx-auto'>
-        {/* Large Heart Icon */}
-        <div className='mb-8'>
-          <div className='text-8xl mb-4 animate-pulse'>💜</div>
-          <div className='w-32 h-1 bg-linear-to-r from-pink-500 to-purple-600 rounded-full mx-auto mb-6'></div>
-        </div>
-        
+      <div className='text-center max-w-2xl mx-auto'> 
         {/* Main Content */}
         <h2 className='text-4xl font-bold mb-6 bg-linear-to-r from-pink-400 via-purple-500 to-indigo-500 bg-clip-text text-transparent'> 
           No Favorite Movies Yet 
