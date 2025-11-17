@@ -80,21 +80,6 @@ const Home = () => {
                         <MovieCard movie={movie} key={movie.id} />
                     ))}
                 </div>
-
-                {/* No Results Message */}
-                {searchQuery && !movie.some(movie => movie.title.toLowerCase().startsWith(searchQuery)) && (
-                    <div className='text-center py-16'>
-                        <div className='text-6xl mb-4'>🎭</div>
-                        <h3 className='text-2xl font-bold text-white mb-2'>No movies found</h3>
-                        <p className='text-gray-400 mb-6'>Try searching with different keywords</p>
-                        <button 
-                            onClick={() => setSearchQuery("")}
-                            className='px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors duration-300'
-                        >
-                            Clear Search
-                        </button>
-                    </div>
-                )}
             </div>
         </div>
     )
