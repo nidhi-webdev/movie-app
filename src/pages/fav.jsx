@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Fav = () => {
   return (
@@ -22,7 +21,7 @@ const Fav = () => {
             🎬 Browse Movies
           </button>
           
-          {/* Decorative Elements */}
+          {/* Decoration Elements */}
           <div className='flex items-center justify-center space-x-4 mt-12 opacity-60'>
             <div className='text-2xl'>🍿</div>
             <div className='text-2xl'>🎭</div>
