@@ -8,12 +8,15 @@ const Home = () => {
     // For Search 
     const [searchQuery, setSearchQuery] = useState("");
     const [movie, setMovie] = useState([]);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const loadPopularMovies = async () => {
             try {
                 const popularMovies = await getPopularMovies()
                 setMovie(popularMovies)
+            } catch (err) {
+
             }
         }
 
