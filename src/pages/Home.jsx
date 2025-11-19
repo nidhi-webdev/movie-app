@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 import MovieCard from '../components/movieCard';
 import { useState } from 'react';
-
+import { getPopularMovies, searchMovies } from '../services/api'
 
 
 const Home = () => {
@@ -11,7 +11,9 @@ const Home = () => {
 
     useEffect(() => {
         const loadPopularMovies = async () => {
-            
+            try {
+                const popularMovies = await getPopularMovies
+            }
         }
 
        
