@@ -63,11 +63,14 @@ const Home = () => {
                 </form>
 
                 {/* Movies Grid */}
-                <div className='movie-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
-                    {movie.map((movie) => movie.title.toLowerCase().startsWith(searchQuery) && (
-                        <MovieCard movie={movie} key={movie.id} />
-                    ))}
-                </div>
+                {loading ? <div className='loading'> Loading... </div> :
+                    <div className='movie-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
+                        {movie.map((movie) => movie.title.toLowerCase().startsWith(searchQuery) && (
+                            <MovieCard movie={movie} key={movie.id} />
+                        ))}
+                    </div>
+                }
+
             </div>
         </div>
     )
