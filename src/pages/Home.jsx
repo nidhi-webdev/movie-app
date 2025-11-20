@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 import MovieCard from '../components/movieCard';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { getPopularMovies, searchMovies } from '../services/api'
 
 
@@ -17,11 +17,11 @@ const Home = () => {
                 const popularMovies = await getPopularMovies()
                 setMovie(popularMovies)
             } catch (err) {
-
+                setError("Failed to load movies...")
             }
         }
 
-       
+
     }, [])
 
 
