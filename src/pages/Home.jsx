@@ -17,10 +17,11 @@ const Home = () => {
                 const popularMovies = await getPopularMovies()
                 setMovie(popularMovies)
             } catch (err) {
+                console.log(err)
                 setError("Failed to load movies...")
             }
         }
-
+        loadPopularMovies()
 
     }, [])
 
