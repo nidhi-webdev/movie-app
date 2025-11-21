@@ -33,10 +33,12 @@ const Home = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (searchQuery.trim()) {
-            // Search functionality is handled by the filter below
-            console.log(`Searching for: ${searchQuery}`)
-        }
+        if (!searchQuery.trim()) return
+        if(loading) return
+
+        setLoading(true)
+           
+        setSearchQuery(" ")
     }
 
 
