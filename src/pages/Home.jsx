@@ -49,8 +49,6 @@ const Home = () => {
         } finally {
             setLoading(false)
         }
-
-        setSearchQuery(" ")
     }
 
 
@@ -72,8 +70,7 @@ const Home = () => {
                         />
                         <button
                             type='submit'
-                            className='search-button px-8 py-4 bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-r-xl sm:rounded-l-none rounded-l-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500'
-                        >
+                            className='search-button px-8 py-4 bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-r-xl sm:rounded-l-none rounded-l-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500'>
                             Search
                         </button>
                     </div>
