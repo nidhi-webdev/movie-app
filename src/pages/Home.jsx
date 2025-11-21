@@ -31,7 +31,7 @@ const Home = () => {
 
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         if (!searchQuery.trim()) return
         if (loading) return
@@ -39,9 +39,13 @@ const Home = () => {
         setLoading(true)
 
         try {
+            const searchResult = await searchMovies(searchQuery)
+            setMovie(searchResult)
+            setError(null)
 
         } catch (err) {
-
+            console.log(err)
+            setError("Falied to seach Movie...")
         } finally {
             setLoading(false)
         }
