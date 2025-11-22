@@ -14,10 +14,13 @@ export const MovieProvider = ({ children }) => {
 
       if(storedFav) setFavorites(JSON.parse(storedFav))
     
-      return () => {
-        second
-      }
+     
     }, [third])
+    
+    useEffect(() => {
+      localStorage.setItem(JSON.stringify(favorites))
+      
+    }, [favorites])
     
 
 
