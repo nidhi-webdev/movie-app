@@ -3,12 +3,13 @@ import './App.css'
 import Fav from '../src/pages/fav'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
+import MovieProvider from '../src/Context/MovieContext'
 
 function App() {
 
 
   return (
-    <div>
+    <MovieProvider>
       <Navbar />
       <main className='main-content'>
         <Routes>
@@ -17,7 +18,7 @@ function App() {
         </Routes>
 
       </main>
-    </div>
+    </MovieProvider>
 
 
 
