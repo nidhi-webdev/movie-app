@@ -5,8 +5,10 @@ const MovieCard = ({ movie }) => {
     const { isFavorite, removeFromFavorites, addToFavorites } = useMovieContext()
     const favorite = isFavorite(movie.id)
 
-    const onFavClick = () => {
-        alert("clicked")
+    const onFavClick = (e) => {
+        e.preventDefault()
+        if(favorite) removeFromFavorites(movie.id)
+            else addToFavorites(movie)
     }
 
 
