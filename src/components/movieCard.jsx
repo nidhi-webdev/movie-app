@@ -7,6 +7,7 @@ const MovieCard = ({ movie }) => {
 
     const onFavClick = (e) => {
         e.preventDefault()
+        e.stopPropagation()
         if(favorite) removeFromFavorites(movie.id)
             else addToFavorites(movie)
     }
