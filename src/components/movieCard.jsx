@@ -1,6 +1,8 @@
-import React from 'react'
+import { useMovieContext } from '../Context/MovieContext'
+
 
 const MovieCard = ({ movie }) => {
+    const { isFavorite, removeFromFavorites, addToFavorites } = useMovieContext()
 
     const onFavClick = () => {
         alert("clicked")
