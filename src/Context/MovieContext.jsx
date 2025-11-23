@@ -4,7 +4,7 @@ import { createContext, useContext } from "react";
 
 const MovieContext = createContext()
 
-export const useMovieContext = () =>  useContext(MovieContext)
+export const useMovieContext = () => useContext(MovieContext)
 
 export const MovieProvider = ({ children }) => {
     const [favorites, setFavorites] = useState(() => {
@@ -17,8 +17,11 @@ export const MovieProvider = ({ children }) => {
     })
 
     useEffect(() => {
-        localStorage.setItem('favorites', JSON.stringify(favorites))
-
+        try {
+            localStorage.setItem('favorites', JSON.stringify(favorites))
+        } catch (err) {
+            console.error('Falied to save fav to lOcal Storage:', err)
+        }
     }, [favorites])
 
     const addToFavorites = (movie) => {
