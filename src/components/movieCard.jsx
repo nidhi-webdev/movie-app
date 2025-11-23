@@ -3,6 +3,7 @@ import { useMovieContext } from '../Context/MovieContext'
 
 const MovieCard = ({ movie }) => {
     const { isFavorite, removeFromFavorites, addToFavorites } = useMovieContext()
+    const favorite = isFavorite(movie.id)
 
     const onFavClick = () => {
         alert("clicked")
@@ -14,7 +15,7 @@ const MovieCard = ({ movie }) => {
             <div className='movie-poster'>
                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                 <div className='movie-overlay'>
-                    <button className='fav-btn' onClick={onFavClick}>
+                    <button className={`fav-btn ${favorite ? "active" : "" }`} onClick={onFavClick}>
                         ♥
                     </button>
                 </div>
