@@ -5,9 +5,12 @@ import MovieCard from '../components/movieCard'
 const Fav = () => {
   const { Fav } = useMovieContext();
 
-
-
+if(Fav) {
+  return 
   
+}
+
+
   return (
     <div className='fav-empty min-h-screen bg-linear-to-br from-gray-900 via-purple-900 to-indigo-900 flex items-center justify-center p-6'>
       <div className='text-center max-w-2xl mx-auto'> 
