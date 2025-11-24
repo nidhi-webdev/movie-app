@@ -6,11 +6,15 @@ const Fav = () => {
   const { Fav } = useMovieContext();
 
   if (Fav) {
-    return <div className='movie-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
-      {movie.map((movie) => movie.title.toLowerCase().startsWith(searchQuery) && (
-        <MovieCard movie={movie} key={movie.id} />
-      ))}
-    </div>
+    return (
+      <div className=''>
+        <h2> Your Fav movies </h2>
+      <div className='movie-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
+        {movie.map((movie) => movie.title.toLowerCase().startsWith(searchQuery) && (
+          <MovieCard movie={movie} key={movie.id} />
+        ))}
+        </div>
+      </div>)
 
   }
 
