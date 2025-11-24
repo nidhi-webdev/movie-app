@@ -1,3 +1,5 @@
+import { useMovieContext } from '../Context/MovieContext'
+
 
 const Fav = () => {
   return (
