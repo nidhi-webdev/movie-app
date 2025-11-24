@@ -1,4 +1,5 @@
 import { useMovieContext } from '../Context/MovieContext'
+import MovieCard from '../components/movieCard'
 
 
 const Fav = () => {
