@@ -3,9 +3,9 @@ import MovieCard from '../components/movieCard'
 
 
 const Fav = () => {
-  const { Fav } = useMovieContext();
+  const { favorite } = useMovieContext();
 
-  if (Fav) {
+  if (favorite) {
     return (
       <div className=''>
         <h2> Your Fav movies </h2>
