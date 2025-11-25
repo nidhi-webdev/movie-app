@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import MovieCard from '../components/movieCard';
 import { useState, useEffect } from 'react';
 import { getPopularMovies, searchMovies } from '../services/Api'

@@ -3,16 +3,16 @@ import MovieCard from '../components/movieCard'
 
 
 const Fav = () => {
-  const { favorite } = useMovieContext();
+  const { favorites } = useMovieContext();
 
-  if (favorite) {
+  if ( favorites?.length > 0 ) {
     return (
       <div className=''>
         <h2> Your Fav movies </h2>
       <div className='movie-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
-        {movie.map((movie) => movie.title.toLowerCase().startsWith(searchQuery) && (
+        {favorites.map((movie) => 
           <MovieCard movie={movie} key={movie.id} />
-        ))}
+        )}
         </div>
       </div>)
 
